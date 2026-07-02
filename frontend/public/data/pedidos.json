@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "date": "2026-06-20T20:30:00",
+    "status": "PENDIENTE",
+    "total": 19500,
+    "paymentMethod": "EFECTIVO",
+    "userId": 2,
+    "userEmail": "juan@foodstore.com",
+    "items": [
+      {
+        "productId": 1,
+        "productName": "Hamburguesa Clásica",
+        "quantity": 2,
+        "subtotal": 17000
+      },
+      {
+        "productId": 6,
+        "productName": "Coca Cola",
+        "quantity": 1,
+        "subtotal": 2500
+      }
+    ],
+    "phone": "387 555 1234",
+    "address": "Av. San Martín 1200, Salta Capital"
+  },
+  {
+    "id": 2,
+    "date": "2026-06-21T21:15:00",
+    "status": "CONFIRMADO",
+    "total": 23000,
+    "paymentMethod": "TARJETA",
+    "userId": 3,
+    "userEmail": "lucia@foodstore.com",
+    "items": [
+      {
+        "productId": 4,
+        "productName": "Pizza Muzzarella",
+        "quantity": 1,
+        "subtotal": 11000
+      },
+      {
+        "productId": 5,
+        "productName": "Pizza Napolitana",
+        "quantity": 1,
+        "subtotal": 12000
+      }
+    ],
+    "phone": "387 555 9876",
+    "address": "Mitre 450, Salta Capital"
+  }
+]

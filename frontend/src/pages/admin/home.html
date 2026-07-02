@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Food Store</title>
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <header>
+        <a class="brand-home" href="./home.html" aria-label="Volver al inicio del panel administrador">
+            <span>Panel de</span>
+            <strong>Administrador</strong>
+        </a>
+
+        <nav>
+            <a href="./orders/orders.html">Pedidos</a>
+            <a href="./products/products.html">Gestionar productos y categorías</a>
+            <a href="/src/pages/store/home/home.html">Ver tienda</a>
+            <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-admin">
+            <div>
+                <p class="eyebrow dark">Administración</p>
+                <h1>Panel operativo</h1>
+                <p>Accesos principales para controlar pedidos, catálogo y vista pública de la tienda.</p>
+            </div>
+            <a class="hero-action" href="./orders/orders.html">
+                <span>Ver pedidos</span>
+                <strong><span id="stat-pedidos-activos">0</span> activos</strong>
+            </a>
+        </section>
+
+        <section class="dashboard" aria-label="Accesos principales del administrador">
+            <a class="admin-card principal" href="./orders/orders.html" aria-label="Ir a gestión de pedidos">
+                <div>
+                    <p class="card-kicker">Principal</p>
+                    <h2>Ver pedidos</h2>
+                    <p>Controlar pedidos nuevos y en curso. Los entregados quedan disponibles desde el filtro correspondiente.</p>
+                </div>
+                <div class="card-number">
+                    <strong id="stat-pedidos-operativos">0</strong>
+                    <span>activos</span>
+                </div>
+            </a>
+
+            <a class="admin-card" href="./products/products.html" aria-label="Ir a gestión de productos y categorías">
+                <div>
+                    <p class="card-kicker">Catálogo</p>
+                    <h2>Gestionar productos y categorías</h2>
+                    <p>Crear, editar o eliminar productos y ordenar las categorías desde una única pantalla.</p>
+                </div>
+                <div class="card-number compacto">
+                    <strong id="stat-productos">0</strong>
+                    <span>productos</span>
+                </div>
+            </a>
+
+            <a class="admin-card" href="/src/pages/store/home/home.html" aria-label="Ver tienda como administrador">
+                <div>
+                    <p class="card-kicker">Vista pública</p>
+                    <h2>Ver tienda</h2>
+                    <p>Revisar cómo ve el cliente el catálogo, los filtros, el detalle y las acciones principales.</p>
+                </div>
+                <div class="card-number compacto">
+                    <strong id="stat-categorias">0</strong>
+                    <span>categorías</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="resumen-pedidos">
+            <div class="section-title compact">
+                <div>
+                    <p class="eyebrow dark">Estados</p>
+                    <h2>Resumen de pedidos</h2>
+                </div>
+                <a class="link-secundario" href="./orders/orders.html">Abrir pedidos</a>
+            </div>
+
+            <div id="resumen-pedidos" class="status-grid"></div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/pages/admin/home.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

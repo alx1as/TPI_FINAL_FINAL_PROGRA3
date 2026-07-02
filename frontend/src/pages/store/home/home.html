@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store</title>
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <header>
+        <div>
+            <p class="eyebrow">Hamburguesería</p>
+            <h1>Food Store</h1>
+        </div>
+
+        <nav>
+            <a href="./home.html">Inicio</a>
+            <a id="admin-link" href="../../admin/home.html" hidden>Panel admin</a>
+            <a id="cart-link" href="../cart/cart.html">Carrito <span id="cart-count">0</span></a>
+            <a id="orders-link" href="../../client/orders/orders.html">Mis pedidos</a>
+            <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="admin-store-notice" class="admin-notice" hidden>
+            <strong>Vista de administrador.</strong>
+            Estás revisando la tienda en modo lectura. Para cargar productos o gestionar pedidos, volvé al panel admin.
+        </section>
+
+        <section class="toolbar">
+            <form id="form-busqueda">
+                <input id="input-busqueda" type="text" placeholder="Buscar hamburguesas, bebidas, papas...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="orden-box">
+                <label for="orden-productos">Ordenar</label>
+                <select id="orden-productos">
+                    <option value="default">Sin orden</option>
+                    <option value="name-asc">Nombre A-Z</option>
+                    <option value="name-desc">Nombre Z-A</option>
+                    <option value="price-asc">Precio menor a mayor</option>
+                    <option value="price-desc">Precio mayor a menor</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="layout-store">
+            <aside>
+                <h2>Categorías</h2>
+                <ul id="lista-categorias"></ul>
+            </aside>
+
+            <section class="productos-wrapper">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow dark">Catálogo</p>
+                        <h2>Productos disponibles</h2>
+                    </div>
+                    <span id="contador-productos" class="contador-productos">0 productos</span>
+                </div>
+                <section id="contenedor-productos"></section>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Food Store. Todos los derechos reservados.</p>
+        <p>Contacto: info@foodstore.com</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./home.ts"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+:root {
+    --bg: #f7f1e7;
+    --surface: #fff9f0;
+    --white: #ffffff;
+    --ink: #221b15;
+    --muted: #776a5e;
+    --line: #e2d3c1;
+    --brand: #c76022;
+    --brand-dark: #2b1a13;
+    --accent: #e8873f;
+    --warning-bg: #fbefd0;
+    --warning: #8a6114;
+    --info-bg: #e4edf8;
+    --info: #275d91;
+    --success-bg: #e7f4e8;
+    --success: #277343;
+    --danger-bg: #f8e5df;
+    --danger: #9f3324;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--brand-dark);
+    color: white;
+    border-bottom: 4px solid var(--accent);
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a,
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links .activo { color: #f6c999; }
+
+.logout-btn {
+    padding: .65rem .9rem;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.logout-btn:hover { background: white; color: var(--brand-dark); }
+
+.orders-page {
+    width: min(900px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1.5rem 0 2.5rem;
+}
+
+.orders-header,
+.pedido-card,
+.estado-vacio {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(54, 33, 20, .06);
+}
+
+.orders-header {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.orders-header h1 { margin-bottom: .35rem; }
+.orders-header p { color: var(--muted); }
+
+.orders-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.pedido-card { padding: 1rem; }
+
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-bottom: .8rem;
+    margin-bottom: .8rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.pedido-header h2 { font-size: 1.2rem; margin-bottom: .25rem; }
+.pedido-header p { color: var(--muted); }
+
+.badge {
+    padding: .45rem .7rem;
+    border-radius: 8px;
+    font-size: .78rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.estado-pendiente { background: var(--warning-bg); color: var(--warning); }
+.estado-confirmado { background: var(--info-bg); color: var(--info); }
+.estado-terminado { background: var(--success-bg); color: var(--success); }
+.estado-cancelado { background: var(--danger-bg); color: var(--danger); }
+
+.pedido-body p { margin-bottom: .75rem; }
+.pedido-productos {
+    list-style: none;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: .9rem;
+}
+
+.pedido-productos li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .85rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+}
+
+.pedido-productos li:last-child { border-bottom: none; }
+
+.pedido-total {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--brand);
+}
+
+.estado-vacio {
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+.estado-vacio a {
+    display: inline-block;
+    margin-top: .8rem;
+    color: var(--brand);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1.2rem;
+    background: #f0dfcb;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+}
+
+.footer p { margin: .25rem 0; }
+
+@media (max-width: 620px) {
+    .navbar { align-items: flex-start; flex-direction: column; }
+    .orders-page { width: min(100% - 1rem, 900px); }
+    .pedido-header { flex-direction: column; }
+    .pedido-productos li { flex-direction: column; }
+    .pedido-total { text-align: left; }
+}

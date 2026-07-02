@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis pedidos | Food Store</title>
+    <link rel="stylesheet" href="./orders.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../../store/home/home.html">Food Store</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../../store/home/home.html">Inicio</a>
+            <a href="../../store/cart/cart.html">Carrito</a>
+            <a href="./orders.html" class="activo">Mis pedidos</a>
+            <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main class="orders-page">
+        <section class="orders-header">
+            <h1>Mis pedidos</h1>
+            <p>Acá podés consultar el estado y el detalle de tus compras.</p>
+        </section>
+
+        <section id="contenedor-pedidos" class="orders-list"></section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Food Store. Todos los derechos reservados.</p>
+        <p>Contacto: info@foodstore.com</p>
+    </footer>
+
+    <script type="module" src="./orders.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

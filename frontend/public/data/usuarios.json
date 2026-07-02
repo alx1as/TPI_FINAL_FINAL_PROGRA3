@@ -1,0 +1,17 @@
+[
+  {
+    "email": "admin@foodstore.com",
+    "password": "1234",
+    "role": "admin"
+  },
+  {
+    "email": "juan@foodstore.com",
+    "password": "1234",
+    "role": "client"
+  },
+  {
+    "email": "lucia@foodstore.com",
+    "password": "1234",
+    "role": "client"
+  }
+]

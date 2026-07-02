@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Hamburguesas",
+    "description": "Hamburguesas artesanales de carne, pollo y opciones vegetarianas.",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "name": "Pizzas",
+    "description": "Pizzas clásicas y especiales.",
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "name": "Bebidas",
+    "description": "Bebidas frías para acompañar el pedido.",
+    "image": "https://images.unsplash.com/photo-1581006852262-e4307cf6283a",
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "name": "Papas",
+    "description": "Papas fritas clásicas y con agregados.",
+    "image": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
+    "deleted": false
+  },
+  {
+    "id": 5,
+    "name": "Postres",
+    "description": "Opciones dulces para finalizar el pedido.",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
+    "deleted": false
+  },
+  {
+    "id": 6,
+    "name": "Sandwiches",
+    "description": "Sándwiches simples y completos.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+    "deleted": false
+  }
+]

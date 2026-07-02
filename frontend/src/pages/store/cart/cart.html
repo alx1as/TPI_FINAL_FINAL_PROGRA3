@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Food Store</title>
+    <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../home/home.html">Food Store</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="../home/home.html">Inicio</a>
+            <a href="../home/home.html">Seguir comprando</a>
+            <a href="./cart.html" class="activo">Carrito</a>
+            <a href="../../client/orders/orders.html">Mis pedidos</a>
+            <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <section class="cart-header">
+            <h1>Tu carrito</h1>
+            <p>Revisá tus productos antes de finalizar la compra</p>
+        </section>
+
+        <section class="cart-layout">
+            <section class="cart-products">
+                <div id="contenedor-carrito"></div>
+                
+            </section>
+
+            <aside class="cart-summary">
+    <h2>Resumen</h2>
+    <p>Acá podés ver tu pedido antes de comprar.</p>
+
+    <div class="summary-box">
+        <p>Subtotal: <span id="subtotal-carrito">$0</span></p>
+        <p>Envío: <span id="envio-carrito">$0</span></p>
+        <p>Total: <span id="total-carrito">$0</span></p>
+    </div>
+
+    <div class="checkout-box">
+        <label for="telefono-entrega">Teléfono de contacto</label>
+        <input id="telefono-entrega" type="tel" placeholder="Ej: 387 555 1234" autocomplete="tel">
+
+        <label for="direccion-entrega">Dirección de entrega</label>
+        <textarea id="direccion-entrega" rows="3" placeholder="Calle, número, barrio o referencia"></textarea>
+
+        <label for="forma-pago">Forma de pago</label>
+        <select id="forma-pago">
+            <option value="EFECTIVO">Efectivo</option>
+            <option value="TARJETA">Tarjeta</option>
+            <option value="TRANSFERENCIA">Transferencia</option>
+        </select>
+    </div>
+
+    <button id="btn-confirmar-compra" class="btn-comprar-falso" type="button">
+        Confirmar compra
+    </button>
+
+    <button id="btn-vaciar-carrito" class="btn-vaciar" type="button">
+        Vaciar carrito
+    </button>
+
+    <a href="../home/home.html" class="btn-volver">
+        Volver al home
+    </a>
+</aside>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Food Store. Todos los derechos reservados.</p>
+        <p>Contacto: info@foodstore.com</p>
+    </footer>
+
+   <script type="module" src="./cart.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

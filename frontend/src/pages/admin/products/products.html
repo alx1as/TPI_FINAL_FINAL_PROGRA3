@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Productos y Categorías | Food Store</title>
+    <link rel="stylesheet" href="./products.css">
+</head>
+<body>
+    <header>
+        <a class="brand-home" href="../home.html" aria-label="Volver al inicio del panel administrador">
+            <span>Panel de</span>
+            <strong>Administrador</strong>
+        </a>
+        <nav>
+            <a href="../orders/orders.html">Pedidos</a>
+            <a href="./products.html">Gestionar productos y categorías</a>
+            <a href="../../store/home/home.html">Ver tienda</a>
+            <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gestion-header">
+            <div>
+                <p class="eyebrow dark">Catálogo</p>
+                <h1>Gestionar productos y categorías</h1>
+                <p>Administración unificada del catálogo: productos, precios, stock, disponibilidad y categorías.</p>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Cambiar vista de gestión">
+                <button id="tab-productos" class="tab-btn activo" type="button" data-tab="productos">Productos</button>
+                <button id="tab-categorias" class="tab-btn" type="button" data-tab="categorias">Categorías</button>
+            </div>
+        </section>
+
+        <section id="panel-productos" class="panel-tab activo" aria-labelledby="tab-productos">
+            <div class="section-header">
+                <div>
+                    <h2>Productos cargados</h2>
+                    <p>Alta, edición, baja lógica y control de disponibilidad.</p>
+                </div>
+                <button id="btn-nuevo-producto" type="button">Nuevo producto</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos"></tbody>
+            </table>
+        </section>
+
+        <section id="panel-categorias" class="panel-tab" aria-labelledby="tab-categorias" hidden>
+            <div class="section-header">
+                <div>
+                    <h2>Categorías cargadas</h2>
+                    <p>Las categorías activas ordenan el catálogo visible para el cliente.</p>
+                </div>
+                <button id="btn-nueva-categoria" type="button">Nueva categoría</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-categorias"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./products.ts"></script>
+</body>
+</html>
