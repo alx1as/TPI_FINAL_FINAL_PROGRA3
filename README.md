@@ -1,5 +1,10 @@
 RUBIN ALEXIA - TPI PROGRAMACIÓN 3 - FOOD STORE
 
+
+LINK A VIDEO DE YOUTUBE: 
+https://www.youtube.com/watch?v=qlYH9KMtsAQ
+
+
 Proyecto dividido en dos partes independientes:
 
 1. FRONTEND
@@ -37,3 +42,4 @@ cd backend
 Usuarios de prueba frontend:
 - Admin: admin@foodstore.com / 1234
 - Cliente: juan@foodstore.com / 1234
+
